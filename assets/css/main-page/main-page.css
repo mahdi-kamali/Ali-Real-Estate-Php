@@ -1,0 +1,675 @@
+@font-face {
+  font-family: "BYekan";
+  src: url("/assets/fonts/byekan.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+* a {
+  padding-left: 0.25rem;
+  text-decoration: none;
+}
+
+.click {
+  cursor: pointer;
+  transition: all ease 0.5s !important;
+}
+.click:hover {
+  color: black;
+  background-color: white;
+  transform: scale(0.95);
+}
+.click:hover a {
+  color: black !important;
+}
+
+.selected {
+  background-color: white !important;
+  color: black !important;
+}
+.selected a {
+  color: black !important;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "BYekan", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body img,
+html img {
+  display: flex;
+}
+
+header {
+  width: 100%;
+  background-color: #845ec2;
+  position: fixed;
+  top: 0rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  color: white;
+  padding: 1em 2em;
+  gap: 2rem;
+  z-index: 5;
+  background-color: rebeccapurple !important;
+}
+header .right {
+  display: flex;
+}
+header .right .nav-bar {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+}
+header .right .nav-bar li {
+  border: 0.1rem white solid;
+  padding: 0.4em 1em;
+  border-radius: 0.5rem;
+  list-style: none;
+  display: flex;
+}
+header .right .nav-bar li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+header img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.card {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  background-color: #ddf1fa !important;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  padding-bottom: 2em;
+  gap: 1.5rem;
+  direction: ltr;
+  margin-bottom: 1rem !important;
+}
+.card .card-header {
+  position: relative;
+  width: 100%;
+}
+.card .card-header .card-image {
+  padding: 0;
+  display: flex;
+}
+.card .card-header .card-image img {
+  width: 100% !important;
+  aspect-ratio: 16/10;
+  border-radius: 0.5rem 0.5rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card-header .card-category {
+  position: absolute;
+  bottom: -1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1em;
+}
+.card .card-header .card-category span {
+  min-width: 10ch;
+  text-align: center;
+  background-color: #338ba7;
+  color: white;
+  padding: 0.4em 0.5rem;
+  border-radius: 0.4rem;
+}
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 2em !important;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.card .card-body .card-row {
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: right;
+}
+.card .card-body .card-name {
+  padding: 0 1em;
+}
+.card .card-body .card-name h1 {
+  font-size: 1.5rem;
+}
+.card .card-body .card-address {
+  background-color: #845ec2;
+  border-radius: 50vw;
+  padding: 0.3em 1em;
+  color: white;
+}
+.card .card-body .card-options {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  direction: rtl;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.card .card-body .card-options .option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card .card-body .card-options .option h1 {
+  font-size: 1rem;
+}
+.card .card-body .card-options .option h1::after {
+  content: " : ";
+}
+.card .card-body .card-price {
+  font-size: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card .card-body .card-price h1 {
+  font-size: 1.5rem;
+}
+
+.main-page .background-slider {
+  align-self: center;
+  width: 90%;
+  margin: 0 !important;
+  position: relative !important;
+}
+.main-page .background-slider .slide img {
+  width: 100%;
+  height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 1rem 1rem;
+}
+.main-page .background-slider .slide .slide-title {
+  position: absolute;
+  background-color: white;
+  bottom: 0%;
+  left: 10%;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.7rem;
+  width: 100%;
+  max-width: 30ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+.main-page .background-slider .slide .slide-title h1 {
+  font-size: 1.5rem;
+  color: black;
+}
+.main-page .background-slider .slide .slide-title .title-body {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-page .background-slider .fa-angle-left {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  align-self: center;
+  z-index: 2;
+  top: 40%;
+  background-color: white;
+  left: 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vw;
+  padding: 0.5em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.main-page .background-slider .fa-angle-right {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  align-self: center;
+  z-index: 2;
+  top: 40%;
+  background-color: white;
+  right: 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vw;
+  padding: 0.5em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.main-page .intro {
+  margin-top: 2rem;
+  align-self: center;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  background-color: #ddf1fa;
+  border-radius: 1rem;
+}
+.main-page .intro .left {
+  -webkit-clip-path: polygon(0% 0%, 75% 0, 100% 50%, 75% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 75% 0, 100% 50%, 75% 100%, 0% 100%);
+}
+.main-page .intro .left img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  -webkit-animation: parallax 50s ease infinite;
+          animation: parallax 50s ease infinite;
+}
+.main-page .intro .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  direction: rtl;
+  gap: 1rem;
+  padding: 4em;
+}
+.main-page .todays-estates {
+  width: 100%;
+  align-self: center;
+  padding: 4em;
+  /* the slides */
+  /* the parent */
+}
+.main-page .todays-estates .slick-slide {
+  margin: 0 1rem;
+}
+.main-page .todays-estates .slick-list {
+  margin: 0 -1rem;
+}
+.main-page .todays-estates .todays-estates-list {
+  width: 100%;
+}
+.main-page .category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 0;
+  width: 90%;
+  align-self: center;
+  border-radius: 1rem;
+}
+.main-page .category-list .category-list-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  background-color: rebeccapurple;
+  border-radius: 1rem;
+  padding: 2em;
+  gap: 0.5rem;
+}
+.main-page .category-list .category-list-header .item {
+  color: #845ec2;
+  padding: 1em;
+  position: relative;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+.main-page .category-list .category-list-header .item a {
+  color: white;
+}
+.main-page .category-list .category-list-header .item:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.main-page .category-list .category-list-header .item:hover a {
+  color: black !important;
+}
+.main-page .category-list .category-list-body {
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(16rem + 1vw), 1fr));
+  gap: 2rem;
+  direction: rtl;
+}
+
+.detail-page .background-slider {
+  align-self: center;
+  width: 90%;
+  margin: 0 !important;
+  position: relative !important;
+}
+.detail-page .background-slider .slide img {
+  width: 100%;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0rem 0 1rem 1rem !important;
+}
+.detail-page .background-slider .slide .slide-title {
+  position: absolute;
+  background-color: white;
+  bottom: 0%;
+  left: 10%;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.7rem;
+  width: 100%;
+  max-width: 30ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+.detail-page .background-slider .slide .slide-title h1 {
+  font-size: 1.5rem;
+  color: black;
+}
+.detail-page .background-slider .slide .slide-title .title-body {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.detail-page .background-slider .fa-angle-left {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  align-self: center;
+  z-index: 2;
+  top: 40%;
+  background-color: white;
+  left: 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vw;
+  padding: 0.5em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.detail-page .background-slider .fa-angle-right {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  align-self: center;
+  z-index: 2;
+  top: 40%;
+  background-color: white;
+  right: 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vw;
+  padding: 0.5em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.detail-page .estate-info {
+  align-self: center;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  padding: 3em 0;
+  color: white;
+  gap: 1rem;
+}
+.detail-page .estate-info .right {
+  padding: 3em;
+  background-color: #845ec2;
+  border-radius: 1rem;
+  color: #845ec2;
+  color: white;
+}
+.detail-page .estate-info .right .right-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+}
+.detail-page .estate-info .right .right-header svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.detail-page .estate-info .right .right-body {
+  display: grid;
+  padding: 2em 1em;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+}
+.detail-page .estate-info .right .right-body .item {
+  background-color: white;
+  color: #845ec2;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5em 0;
+}
+.detail-page .estate-info .right .right-body .item h1 {
+  font-size: 1rem;
+}
+.detail-page .estate-info .right .right-body .item h1::before {
+  content: " : ";
+}
+.detail-page .estate-info .left {
+  border-radius: 1rem;
+  padding: 3em 3em;
+  background-color: #845ec2;
+}
+.detail-page .estate-info .left .left-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+}
+.detail-page .estate-info .left .left-header svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.detail-page .estate-info .left .left-body {
+  padding: 2em;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.detail-page .estate-info .left .left-body span {
+  align-self: flex-end;
+  background-color: white;
+  color: #845ec2;
+  padding: 0.5em 1em;
+  border-radius: 50vw;
+}
+.detail-page .estate-info .left .left-body .categery {
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.detail-page .estate-info .left .left-body .categery a {
+  background-color: white;
+  color: #338ba7;
+  padding: 0.5em 1em;
+  border-radius: 50vw;
+}
+.detail-page .similar-estates {
+  width: 100%;
+  align-self: center;
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* the slides */
+  /* the parent */
+}
+.detail-page .similar-estates .slick-slide {
+  margin: 0 1rem;
+}
+.detail-page .similar-estates .slick-list {
+  margin: 0 -1rem;
+}
+.detail-page .similar-estates .similar-estates-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 1em;
+  gap: 0.5rem;
+  border-bottom: 0.2rem black solid;
+  padding-bottom: 0.5rem;
+}
+.detail-page .similar-estates .similar-estates-header h1 {
+  font-size: 2rem;
+}
+.detail-page .similar-estates .similar-estates-header svg {
+  width: 2rem;
+  height: 2rem;
+}
+.detail-page .similar-estates .similar-estates-list .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddf1fa;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  padding-bottom: 2em;
+  gap: 1.5rem;
+  direction: ltr;
+  margin-bottom: 1rem;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-header .card-image {
+  padding: 0;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-header .card-image img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 0.5rem 0.5rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 2em !important;
+  gap: 0.5rem;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-row {
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: right;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-name {
+  padding: 0 1em;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-name h1 {
+  font-size: 1.5rem;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-address {
+  background-color: #845ec2;
+  border-radius: 50vw;
+  padding: 0.3em 1em;
+  color: white;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-options {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+  direction: rtl;
+  gap: 0.5rem;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-options .option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-options .option h1 {
+  font-size: 1rem;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-options .option h1::after {
+  content: " : ";
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-price {
+  font-size: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.detail-page .similar-estates .similar-estates-list .card .card-body .card-price h1 {
+  font-size: 1.5rem;
+}
+
+@-webkit-keyframes parallax {
+  0% {
+    object-position: left;
+  }
+  50% {
+    object-position: right;
+  }
+  100% {
+    object-position: left;
+  }
+}
+
+@keyframes parallax {
+  0% {
+    -o-object-position: left;
+       object-position: left;
+  }
+  50% {
+    -o-object-position: right;
+       object-position: right;
+  }
+  100% {
+    -o-object-position: left;
+       object-position: left;
+  }
+}/*# sourceMappingURL=main-page.css.map */

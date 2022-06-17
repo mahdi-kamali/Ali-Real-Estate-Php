@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "BYekan";
+  src: url("/fonts/BYekan.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+* a {
+  padding-left: 0.25rem;
+  text-decoration: none;
+}
+
+.click {
+  cursor: pointer;
+  transition: all ease 0.5s !important;
+}
+.click:hover {
+  color: black;
+  background-color: white;
+  transform: scale(0.9);
+}
+.click:hover a {
+  color: black !important;
+}
+
+.selected {
+  background-color: white;
+  color: black !important;
+  border-radius: 0.5rem;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "BYekan", sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: #845ec2;
+  position: fixed;
+  top: 0rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  color: white;
+  padding: 1em 2em;
+  gap: 2rem;
+}
+header .right {
+  display: flex;
+}
+header .right .nav-bar {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+}
+header .right .nav-bar li {
+  border: 0.1rem white solid;
+  padding: 0.4em 1em;
+  border-radius: 0.5rem;
+  list-style: none;
+  display: flex;
+}
+header .right .nav-bar li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+header img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rebeccapurple;
+}
+body .sign-in {
+  margin-top: 3rem;
+  background-color: white;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+  height: 25rem;
+  width: 25rem;
+}
+body .sign-in form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3em;
+  gap: 1rem;
+}
+body .sign-in form .form-header {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: center;
+}
+body .sign-in form .form-body {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body .sign-in form .form-body .form-group {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+body .sign-in form .form-body .form-group label {
+  width: 5ch;
+  text-align: right;
+}
+body .sign-in form .form-body .form-group input {
+  all: unset;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.2em 0.5em;
+  border-radius: 0.3rem;
+}
+body .sign-in form .form-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+body .sign-in form .form-buttons button,
+body .sign-in form .form-buttons a {
+  all: unset;
+  width: 6ch;
+  background-color: #845ec2;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0.3em;
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+body .sign-in form .form-buttons button:hover,
+body .sign-in form .form-buttons a:hover {
+  transform: scale(0.9);
+}
+body .sign-up {
+  margin-top: 3rem;
+  background-color: white;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+  height: 40rem;
+  width: 30rem;
+}
+body .sign-up form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3em;
+  gap: 1rem;
+}
+body .sign-up form .form-header {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: center;
+}
+body .sign-up form .form-body {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body .sign-up form .form-body .form-group {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+body .sign-up form .form-body .form-group label {
+  width: 8ch;
+  text-align: right;
+}
+body .sign-up form .form-body .form-group input {
+  all: unset;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.2em 0.5em;
+  border-radius: 0.3rem;
+}
+body .sign-up form .form-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+body .sign-up form .form-buttons button,
+body .sign-up form .form-buttons a {
+  all: unset;
+  width: 8ch;
+  background-color: #845ec2;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0.3em;
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+body .sign-up form .form-buttons button:hover,
+body .sign-up form .form-buttons a:hover {
+  transform: scale(0.9);
+}/*# sourceMappingURL=sign-page.css.map */

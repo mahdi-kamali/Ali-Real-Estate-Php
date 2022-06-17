@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "BYekan";
+    src: url("/fonts/BYekan.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+    a {
+        padding-left: 0.25rem;
+        text-decoration: none;
+    }
+}
+
+.click {
+    cursor: pointer;
+    transition: all ease 0.5s !important;
+    &:hover {
+        color: black;
+        a {
+            color: black !important;
+        }
+        background-color: white;
+        transform: scale(0.9);
+    }
+}
+
+.selected {
+    background-color: white;
+    color: black !important;
+    border-radius: 0.5rem;
+}
+
+$color-1: #845ec2;
+$color-2: #ddf1fa;
+$color-3: #338ba7;
+
+body,
+html {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "BYekan", sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: $color-1;
+    position: fixed;
+    top: 0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    color: white;
+    padding: 1em 2em;
+    gap: 2rem;
+    .right {
+        display: flex;
+        .nav-bar {
+            display: flex;
+            gap: 1rem;
+            flex-direction: row-reverse;
+            li {
+                border: 0.1rem white solid;
+                padding: 0.4em 1em;
+                border-radius: 0.5rem;
+                list-style: none;
+                display: flex;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: white;
+                }
+            }
+            .user-account {
+            }
+        }
+    }
+
+    .left {
+    }
+
+    img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: cover;
+        border-radius: 50vw;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+    .sign-in {
+        margin-top: 3rem;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        box-shadow: 0.3rem 0.3rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+        height: 25rem;
+        width: 25rem;
+        form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 3em;
+            gap: 1rem;
+            .form-header {
+                gap: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                align-items: center;
+            }
+            .form-body {
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .form-group {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    gap: 1rem;
+                    label {
+                        width: 5ch;
+                        text-align: right;
+                    }
+                    input {
+                        all: unset;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        padding: 0.2em 0.5em;
+                        border-radius: 0.3rem;
+                    }
+                }
+            }
+            .form-buttons {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 1rem;
+                button,
+                a {
+                    all: unset;
+                    width: 6ch;
+                    background-color: $color-1;
+                    vertical-align: middle;
+                    text-align: center;
+                    padding: 0.3em;
+                    color: white;
+                    border-radius: 0.3rem;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+    }
+
+    .sign-up {
+        margin-top: 3rem;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        box-shadow: 0.3rem 0.3rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+        height: 40rem;
+        width: 30rem;
+        form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 3em;
+            gap: 1rem;
+            .form-header {
+                gap: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                align-items: center;
+            }
+            .form-body {
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .form-group {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    gap: 1rem;
+                    label {
+                        width: 8ch;
+                        text-align: right;
+                    }
+                    input {
+                        all: unset;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        padding: 0.2em 0.5em;
+                        border-radius: 0.3rem;
+                    }
+                }
+            }
+            .form-buttons {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 1rem;
+                button,
+                a {
+                    all: unset;
+                    width: 8ch;
+                    background-color: $color-1;
+                    vertical-align: middle;
+                    text-align: center;
+                    padding: 0.3em;
+                    color: white;
+                    border-radius: 0.3rem;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+    }
+}
