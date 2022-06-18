@@ -41,7 +41,6 @@ html {
     font-family: "BYekan", sans-serif;
 }
 
-
 body {
     display: grid;
     grid-template-areas:
@@ -164,7 +163,7 @@ body {
                         }
                         tr {
                             text-align: center;
-                            
+
                             a {
                                 width: 10ch;
                                 border-radius: 0.3rem;
@@ -192,11 +191,14 @@ body {
                         }
                         .buttons {
                             width: 8rem;
+
                             form {
                                 display: flex;
                                 flex-direction: column;
                                 gap: 0.5rem;
-                                input ,a {
+                                
+                                input,
+                                a {
                                     width: 100%;
                                 }
                             }
@@ -291,7 +293,6 @@ body {
                     justify-content: center;
                     gap: 1rem;
                 }
-
             }
         }
     }

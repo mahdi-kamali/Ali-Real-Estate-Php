@@ -195,7 +195,8 @@ body .app .container-fluid .row .table-container .table-container-body .buttons 
   flex-direction: column;
   gap: 0.5rem;
 }
-body .app .container-fluid .row .table-container .table-container-body .buttons form input, body .app .container-fluid .row .table-container .table-container-body .buttons form a {
+body .app .container-fluid .row .table-container .table-container-body .buttons form input,
+body .app .container-fluid .row .table-container .table-container-body .buttons form a {
   width: 100%;
 }
 body .app .container-fluid .row .full-size {

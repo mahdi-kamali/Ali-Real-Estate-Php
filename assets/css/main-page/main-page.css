@@ -107,7 +107,8 @@ body {
   padding-bottom: 2em;
   gap: 1.5rem;
   direction: ltr;
-  margin-bottom: 1rem !important;
+  margin-bottom: 3rem !important;
+  cursor: pointer !important;
 }
 .card .card-header {
   position: relative;
@@ -147,7 +148,7 @@ body {
   align-items: flex-end;
   padding: 0 2em !important;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .card .card-body .card-row {
   padding: 0 1em;
@@ -160,7 +161,7 @@ body {
   padding: 0 1em;
 }
 .card .card-body .card-name h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .card .card-body .card-address {
   background-color: #845ec2;
@@ -332,13 +333,16 @@ body {
   align-self: center;
   border-radius: 1rem;
 }
+.main-page .category-list .section-header {
+  text-align: right;
+}
 .main-page .category-list .category-list-header {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start;
-  background-color: rebeccapurple;
+  justify-content: flex-end;
+  background-color: #845ec2;
   border-radius: 1rem;
   padding: 2em;
   gap: 0.5rem;
@@ -645,6 +649,116 @@ body {
 }
 .detail-page .similar-estates .similar-estates-list .card .card-body .card-price h1 {
   font-size: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  margin-top: 3rem;
+  background: #845ec2;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: scale(0.9);
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+footer .logo-social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .logo-social-media .footer-background {
+  display: none;
+}
+footer .logo-social-media .footer-background img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: 10rem;
+  border-radius: 50vw;
+}
+footer .logo-social-media .logo {
+  font-size: 1.5rem;
+  margin-top: -2rem;
+}
+footer .logo-social-media .social-media ul {
+  direction: rtl;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+footer .logo-social-media .social-media ul i {
+  font-size: 2rem;
+}
+footer .footer-menu {
+  padding: 1;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  padding: 3rem 10% 0 10%;
+  text-align: right;
+}
+footer .footer-menu .footer-list-header {
+  font-size: 1.3rem;
+  display: flex;
+  gap: 0.5em;
+  justify-content: end;
+  border-bottom: 0.1rem rgba(0, 0, 0, 0.123) solid;
+  -o-border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+     border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+  padding-bottom: 0.7rem;
+}
+footer .footer-menu .footer-list-header i {
+  font-size: 1.3rem;
+}
+footer .footer-menu .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .footer-menu .list li {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+footer .footer-menu .list li a {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  color: white;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  transition-duration: 0.5s;
+  border-radius: 0.5rem;
+}
+footer .footer-menu .list li a:hover {
+  background-color: rgba(182, 182, 182, 0.164);
+}
+footer .footer-menu .list li img {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 4rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+footer .footer-menu .list .special a {
+  padding: 0;
 }
 
 @-webkit-keyframes parallax {
